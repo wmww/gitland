@@ -109,7 +109,7 @@ class GameServer:
 
     def loadMap(self) -> list:
         world = []
-        for row in open("map").read().strip("\n").split("\n"):
+        for row in open("map").read().strip().split("\n"):
             world.append(row.split(","))
 
         return world
@@ -119,7 +119,7 @@ class GameServer:
 
     def drawMap(self, world: list):
         # in no way can this ever backfire
-        mapStr = self.mapToStr(world).replace("ux", "![](icons/ux)").replace("ug", "![](icons/ug)").replace("ur", "![](icons/ur)").replace("ub", "![](icons/ub)").replace("cg", "![](icons/cg)").replace("cr", "![](icons/cr)").replace("cb", "![](icons/cb)").replace(",", " ").replace("\n", "  \n").strip("\n")
+        mapStr = self.mapToStr(world).replace("ux", "![](icons/ux)").replace("ug", "![](icons/ug)").replace("ur", "![](icons/ur)").replace("ub", "![](icons/ub)").replace("cg", "![](icons/cg)").replace("cr", "![](icons/cr)").replace("cb", "![](icons/cb)").replace(",", " ").strip().replace("\n", "  \n")
         red = round((mapStr.count("cr") + mapStr.count("ur")) / 529 * 100)
         blue = round((mapStr.count("cb") + mapStr.count("ub")) / 529 * 100)
         green = round((mapStr.count("cg") + mapStr.count("ug")) / 529 * 100)
@@ -131,7 +131,7 @@ class GameServer:
         mapString = ""
         for row in world:
             mapString += ",".join(row) + "\n"
-        return mapString
+        return mapString.strip()
 
     def movePlayer(self, playerToMove: str, x: int, y: int):
         if x < 0 or y < 0 or x > 22 or y > 22:

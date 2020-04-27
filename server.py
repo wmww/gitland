@@ -7,16 +7,15 @@
 import os, requests, time
 
 class GameServer:
-    def log(self, text):
-        open("log", "a").write(text + "\n")
+    def log(self, text, mode="a"):
+        open("log", mode).write(text + "\n")
         print(text)
 
     def main(self):
         while True:
-            self.log("next turn")
+            self.log("last turn log:", mode = "w")
             self.addPlayers()
             self.updateGameState()
-            self.log("turn done")
             os.system("git add -A")
             os.system("git commit -m \"next turn\"")
             os.system("git push origin master")

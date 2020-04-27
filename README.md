@@ -10,9 +10,9 @@
 ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ug) ![](icons/ug)  
 ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/cr) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ux) ![](icons/ub) ![](icons/cr) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/cr) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/cr) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ux) ![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ux) ![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ux) ![](icons/ug) ![](icons/ub) ![](icons/ux) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
@@ -1852,8 +1852,9 @@
   
   
   
+  
 
-**R:** 35% **G:** 25% **B:** 36%
+**R:** 35% **G:** 24% **B:** 36%
 ## How to play
 
 The goal is to paint the whole map with your team's color by moving. Usage of bots is encouraged.

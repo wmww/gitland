@@ -28,7 +28,7 @@
 The goal is to paint the whole map with your team's color by moving. Usage of bots is encouraged.
 
 ## Joining
-1. Open an issue with a team name as the title (cr/cg/cb)
+1. Open an issue with the title "join". You will be assigned to the team with the fewest memebers.
 2. Create a public repository named "gitland-client"
 3. Create a file called "act" in your repository
 

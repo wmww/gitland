@@ -5,6 +5,7 @@
 # this was getting it done quickly.
 
 import os, requests, time, re
+from collections import Counter
 
 class GameServer:
     def log(self, text, mode="a"):
@@ -28,7 +29,7 @@ class GameServer:
                 "https://api.github.com/repos/programical/gitland/issues?state=open",
                 headers={"Accept":"application/vnd.github.v3+json", "Cache-Control": "no-cache", "Pragma": "no-cache"}
             ).json()
-        except:
+        except Exception:
             print("connection issues - waiting")
             time.sleep(30)
             return
@@ -36,18 +37,19 @@ class GameServer:
         for request in joinRequests:
             try:
                 newPlayer = request["user"]["login"]
-                team = request["title"]
+                title = request["title"]
             except TypeError:
                 self.log("too many API requests - can't add players")
                 return
 
-            # make sure they chose an existing team
-            if team not in ("cg", "cr", "cb"):
-                if team == "leave":
-                    self.clearPlayerData(newPlayer)
-                else:
-                    self.log(newPlayer + " didn't join - invalid team name")
+            if title == "leave":
+                self.clearPlayerData(newPlayer)
                 continue
+            elif title == 'join':
+                # select team with fewest members
+                team = self.getTeamCounts().most_common()[-1][0]
+            else:
+                continue  # unrelated issue
 
             # make sure they aren't already playing
             playing = False
@@ -203,9 +205,21 @@ class GameServer:
         self.saveMap(world)
         self.drawMap(world)
 
+    def getTeamCounts(self) -> Counter:
+        counts = Counter()
+
+        for player in os.listdir("players"):
+            if os.path.isdir("players/" + player):
+                with open("players/" + player + "/team") as team_file:
+                    counts.update([team_file.read().strip()])
+
+        return counts
+
+
 def main():
     server = GameServer()
     server.main()
+
 
 if __name__ == "__main__":
     main()

@@ -149,7 +149,7 @@ class GameServer:
         open("players/" + playerToMove + "/y", "w").write(str(y))
         self.log(playerToMove + " moved to " + str(x) + "/" + str(y))
 
-    def getPlayerAction(self, player):
+    def getPlayerAction(self, player: str):
         html = requests.get(
             "https://github.com/" + player + "/gitland-client/blob/master/act",
             headers={"Cache-Control": "no-cache", "Pragma": "no-cache"}
@@ -180,7 +180,7 @@ class GameServer:
                 y = int(open("players/" + player + "/y").read().strip())
 
                 # player input
-                action = self.getPlayerAction()
+                action = self.getPlayerAction(player)
 
                 if action == "left":
                     self.movePlayer(player, x - 1, y)

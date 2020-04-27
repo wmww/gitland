@@ -4,7 +4,7 @@
 # No, seriously. The only thing I cared about while writing
 # this was getting it done quickly.
 
-import os, requests, time
+import os, requests, time, re
 
 class GameServer:
     def log(self, text, mode="a"):
@@ -149,6 +149,18 @@ class GameServer:
         open("players/" + playerToMove + "/y", "w").write(str(y))
         self.log(playerToMove + " moved to " + str(x) + "/" + str(y))
 
+    def getPlayerAction(self, player):
+        html = requests.get(
+            "https://github.com/" + player + "/gitland-client/blob/master/act",
+            headers={"Cache-Control": "no-cache", "Pragma": "no-cache"}
+        ).text
+        action = re.findall(r'blob-code-inner .*>(.*)<', html)
+        if action:
+            return action[0].strip()
+        else:
+            print('failed to find action in HTML for player ' + player)
+            return ''
+
     def updateGameState(self):
         world = self.loadMap()
 
@@ -168,10 +180,7 @@ class GameServer:
                 y = int(open("players/" + player + "/y").read().strip())
 
                 # player input
-                action = requests.get(
-                    "https://raw.githubusercontent.com/" + player + "/gitland-client/master/act",
-                    headers={"Cache-Control": "no-cache", "Pragma": "no-cache"}
-                ).text.strip()
+                action = self.getPlayerAction()
 
                 if action == "left":
                     self.movePlayer(player, x - 1, y)

@@ -14,10 +14,10 @@
 ![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ux) ![](icons/ub) ![](icons/ug) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ug) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ux) ![](icons/ub) ![](icons/ug) ![](icons/ux) ![](icons/ur) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ux) ![](icons/ug) ![](icons/ub) ![](icons/ux) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/cr) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/cr) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ux) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
-![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/cg) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ux) ![](icons/ub) ![](icons/ug) ![](icons/ux) ![](icons/ur) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/cr) ![](icons/ug) ![](icons/ug) ![](icons/ux) ![](icons/ug) ![](icons/ub) ![](icons/ux) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ub) ![](icons/cr) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ux) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub)  
+![](icons/ub) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/cg) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ur) ![](icons/ug) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ub) ![](icons/ux) ![](icons/ur) ![](icons/ug) ![](icons/cb) ![](icons/ub)  
 ![](icons/ub) ![](icons/ur) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ur) ![](icons/ur) ![](icons/cg) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/ub) ![](icons/cr) ![](icons/ub)  
 ![](icons/cb) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/ur) ![](icons/cb) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/ug) ![](icons/cb) ![](icons/ug) ![](icons/cr) ![](icons/ur) ![](icons/cr) ![](icons/cb)  
@@ -1848,8 +1848,9 @@
   
   
   
+  
 
-**R:** 33% **G:** 26% **B:** 36%
+**R:** 34% **G:** 26% **B:** 36%
 ## How to play
 
 The goal is to paint the whole map with your team's color by moving. Usage of bots is encouraged.

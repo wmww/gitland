@@ -1,6 +1,6 @@
 cr,ur,ur,ur,ur,ur,ur,cb,cb,cb,cb,ub,ub,ub,ub,ub,ub,ur,ur,ur,cb,ub,cb
-ur,ur,ub,ur,ur,ur,ur,ur,ur,ur,ub,ur,ug,ug,ug,ug,ug,ug,ug,ur,ub,ub,cg
-ur,ur,ub,ur,ug,ub,ur,ub,ub,ur,ub,ur,ug,ux,ur,cg,ug,ub,ur,ur,ub,ub,ub
+ur,ur,ub,ur,ur,ur,ur,ur,ur,ur,ub,ur,ug,ug,ug,cg,ug,ug,ug,ur,ub,ub,cg
+ur,ur,ub,ur,ug,ub,ur,ub,ub,ur,ub,ur,ug,ux,ur,ug,ug,ub,ur,ur,ub,ub,ub
 ur,ur,ux,ur,ug,ub,ur,ug,ux,ur,ub,ur,ug,ub,ur,ug,ug,ub,ub,ur,ub,ub,ub
 ur,ur,ub,ur,ub,ub,ur,ub,ub,ub,ub,ur,ug,ub,ub,ug,ub,ub,ub,ur,ub,ub,ub
 ur,ur,ub,ur,ub,ub,ur,ub,ub,ub,ub,ur,ug,ub,ub,ug,ub,ub,ub,ur,ub,ub,cb
@@ -15,12 +15,13 @@ ub,ur,ug,ur,ug,ug,ug,ug,ug,ug,ug,ur,ug,ug,ug,ug,ug,ub,ur,ur,ub,ub,ub
 ub,ur,ux,ur,ux,ub,ug,ux,ur,ug,ug,ug,ug,ub,ub,ub,ub,ub,ub,ur,ub,ub,ub
 ub,ur,ug,ur,ug,ub,ug,ux,ur,ug,ug,ug,ug,ug,ug,ug,ug,ub,ug,ur,ub,ub,ub
 ub,ur,ug,ur,ux,ub,ug,ux,ur,ur,ux,ur,ug,ug,ug,ux,ug,ub,ux,ur,ub,ub,ub
-ub,ur,ug,ur,ug,ub,ub,ub,ur,ur,ub,cr,ur,cg,ur,ur,ur,ub,ur,ur,ub,ub,ub
-ub,ur,ux,ur,ug,ug,ug,ug,ur,ur,ug,ur,ug,ug,ug,ug,ug,ub,ux,ur,ub,ub,ub
-ub,ur,ug,cr,ug,ug,ug,ug,ur,ur,ux,ur,ug,ug,ug,ug,ug,cb,ux,ur,ug,ub,ub
-ub,ur,ux,ug,ug,ug,ug,ug,ur,ur,ux,ur,ug,ug,ug,ug,ug,ug,ux,ur,ug,cb,ub
+ub,ur,ug,ur,ug,ub,ub,ub,ur,ur,cr,ur,ur,ug,ur,ur,ur,ub,ur,ur,ub,ub,ub
+ub,ur,ux,ur,ug,ug,ug,ug,ur,ur,ug,ur,ug,cg,ug,ug,ug,ub,ux,ur,ub,ub,ub
+ub,ur,ug,ur,ug,ug,ug,ug,ur,ur,ux,ur,ug,ug,ug,ug,ug,ub,ux,ur,ug,ub,ub
+ub,ur,ux,cr,ug,ug,ug,ug,ur,ur,ux,ur,ug,ug,ug,ug,ug,cb,ux,ur,ug,cb,ub
 ub,ur,ub,ub,ub,ub,ub,ub,ub,ub,ub,ur,cg,ub,ub,ub,ub,ub,ub,ub,ub,cr,ub
 cb,ur,ur,ur,ur,ur,ur,ur,ur,ur,ur,ur,cb,ug,ug,ug,ug,ug,ug,cr,ur,cr,cb
+
 
 
 

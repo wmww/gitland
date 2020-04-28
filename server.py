@@ -4,7 +4,7 @@
 # No, seriously. The only thing I cared about while writing
 # this was getting it done quickly.
 
-import os, requests, time, re
+import os, requests, time, re, threading
 
 class GameServer:
     def log(self, text, mode="a"):
@@ -161,6 +161,18 @@ class GameServer:
             print('failed to find action in HTML for player ' + player)
             return ''
 
+    def getAllPlayerActions(self):
+        threads = {}
+        for player in os.listdir("players"):
+            if os.path.isdir("players/" + player):
+                 thread = threading.Thread(target=self.getPlayerAction, args=(player))
+                 thread.start()
+                 threads[player] = thread
+        actions = {}
+        for player, thread in threads.items():
+            actions[player] = thread.join()
+        return actions
+
     def updateGameState(self):
         world = self.loadMap()
 
@@ -173,14 +185,15 @@ class GameServer:
                 x += 1
             y += 1
 
-        # add players
+        actions = self.getAllPlayerActions()
+
         for player in os.listdir("players"):
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
 
                 # player input
-                action = self.getPlayerAction()
+                action = actions[player]
 
                 if action == "left":
                     self.movePlayer(player, x - 1, y)

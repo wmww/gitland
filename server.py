@@ -106,15 +106,15 @@ class GameServer:
         # failed. print the team too, for debug purposes
         self.log(player + " didn't join " + team + " - no free space")
 
-    def loadMap(self) -> list:
+    def loadMap(self, file = "map") -> list:
         world = []
-        for row in open("map").read().strip().split("\n"):
+        for row in open(file).read().strip().split("\n"):
             world.append(row.split(","))
 
         return world
 
-    def saveMap(self, world: list):
-        open("map", "w").write(self.mapToStr(world))
+    def saveMap(self, world: list, file = "map"):
+        open(file, "w").write(self.mapToStr(world))
 
     def drawMap(self, world: list):
         # in no way can this ever backfire
@@ -164,6 +164,7 @@ class GameServer:
 
     def updateGameState(self):
         world = self.loadMap()
+        decay = self.loadMap(file = "decay")
 
         # don't carry over player position data, only control
         x, y = 0, 0
@@ -203,6 +204,23 @@ class GameServer:
 
                 world[y][x] = icon
 
+        # tile decay
+        x, y = 0, 0
+        for row in decay:
+            x = 0
+            for tile in row:
+                if "c" in world[y][x]:
+                    decay[y][x] = "0"
+                elif int(tile) >= 30:
+                    self.log("tile " + str(x) + "/" + str(y) + " was lost due to decay")
+                    world[y][x] = "ux"
+                    decay[y][x] = "0"
+                else:
+                    decay[y][x] = str(int(decay[y][x]) + 1)
+                x += 1
+            y += 1
+
+        self.saveMap(decay, file = "decay")
         self.saveMap(world)
         self.drawMap(world)
 

@@ -16,7 +16,7 @@ The goal is to paint the whole map with your team's color by moving. Usage of bo
 ## Playing
 1. Write a single command (up/down/left/right) to your "act" file
 2. Wait for the next turn
-3. Read the "log" file and the files inside "players" for intel
+3. Read the files inside this repository for intel
 
 ## Leaving
 1. Open an issue with the title "leave"

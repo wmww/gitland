@@ -19,7 +19,7 @@ class GameServer:
         os.system("git add -A")
         os.system("git commit -m \"next turn\"")
         os.system("git push origin master")
-        time.sleep(30)
+        time.sleep(15)
 
     def addPlayers(self):
         # players request to join via issue

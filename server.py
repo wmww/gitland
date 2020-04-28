@@ -4,7 +4,7 @@
 # No, seriously. The only thing I cared about while writing
 # this was getting it done quickly.
 
-import os, requests, time, re
+import os, requests, time, re, sys
 
 class GameServer:
     def log(self, text, mode="a"):
@@ -205,7 +205,10 @@ class GameServer:
 
 def main():
     server = GameServer()
-    server.main()
+    if sys.argv[0] == "pre":
+        server.gameLogic()
+    else:
+        server.gameUpdate()
 
 if __name__ == "__main__":
     main()

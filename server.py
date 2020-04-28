@@ -190,8 +190,10 @@ class GameServer:
                     self.movePlayer(player, x, y - 1)
                 elif action == "down":
                     self.movePlayer(player, x, y + 1)
-                else:
+                elif action == "idle":
                     self.log(player + " didn't do anything")
+                else:
+                    self.log(player + " isn't playing")
 
                 # reload after player moves
                 icon = open("players/" + player + "/team").read().strip()

@@ -11,15 +11,15 @@ class GameServer:
         open("log", mode).write(text + "\n")
         print(text)
 
-    # a single turn. the metaserver controls the loop.
-    def main(self):
+    def gameLogic(self):
         self.log("last turn log:", mode = "w")
         self.addPlayers()
         self.updateGameState()
+
+    def gameUpdate(self):
         os.system("git add -A")
         os.system("git commit -m \"next turn\"")
         os.system("git push origin master")
-        time.sleep(22)
 
     def addPlayers(self):
         # players request to join via issue

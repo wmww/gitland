@@ -147,6 +147,7 @@ class GameServer:
 
         open("players/" + playerToMove + "/x", "w").write(str(x))
         open("players/" + playerToMove + "/y", "w").write(str(y))
+        open("players/" + playerToMove + "/timestamp", "w").write(str(time.time()))
         self.log(playerToMove + " moved to " + str(x) + "/" + str(y))
 
     def getPlayerAction(self, player: str):

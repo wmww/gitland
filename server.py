@@ -4,7 +4,7 @@
 # No, seriously. The only thing I cared about while writing
 # this was getting it done quickly.
 
-import os, requests, time, re
+import os, requests, time, re, sys
 from collections import Counter
 
 class GameServer:
@@ -12,15 +12,15 @@ class GameServer:
         open("log", mode).write(text + "\n")
         print(text)
 
-    def main(self):
-        while True:
-            self.log("last turn log:", mode = "w")
-            self.addPlayers()
-            self.updateGameState()
-            os.system("git add -A")
-            os.system("git commit -m \"next turn\"")
-            os.system("git push origin master")
-            time.sleep(30)
+    def gameLogic(self):
+        self.log("last turn log:", mode = "w")
+        self.addPlayers()
+        self.updateGameState()
+
+    def gameUpdate(self):
+        os.system("git add -A")
+        os.system("git commit -m \"next turn\"")
+        os.system("git push origin master")
 
     def addPlayers(self):
         # players request to join via issue
@@ -108,15 +108,15 @@ class GameServer:
         # failed. print the team too, for debug purposes
         self.log(player + " didn't join " + team + " - no free space")
 
-    def loadMap(self) -> list:
+    def loadMap(self, file = "map") -> list:
         world = []
-        for row in open("map").read().strip().split("\n"):
+        for row in open(file).read().strip().split("\n"):
             world.append(row.split(","))
 
         return world
 
-    def saveMap(self, world: list):
-        open("map", "w").write(self.mapToStr(world))
+    def saveMap(self, world: list, file = "map"):
+        open(file, "w").write(self.mapToStr(world))
 
     def drawMap(self, world: list):
         # in no way can this ever backfire
@@ -149,6 +149,7 @@ class GameServer:
 
         open("players/" + playerToMove + "/x", "w").write(str(x))
         open("players/" + playerToMove + "/y", "w").write(str(y))
+        open("players/" + playerToMove + "/timestamp", "w").write(str(time.time()))
         self.log(playerToMove + " moved to " + str(x) + "/" + str(y))
 
     def getPlayerAction(self, player: str):
@@ -165,6 +166,7 @@ class GameServer:
 
     def updateGameState(self):
         world = self.loadMap()
+        decay = self.loadMap(file = "decay")
 
         # don't carry over player position data, only control
         x, y = 0, 0
@@ -192,8 +194,10 @@ class GameServer:
                     self.movePlayer(player, x, y - 1)
                 elif action == "down":
                     self.movePlayer(player, x, y + 1)
-                else:
+                elif action == "idle":
                     self.log(player + " didn't do anything")
+                else:
+                    self.log(player + " isn't playing")
 
                 # reload after player moves
                 icon = open("players/" + player + "/team").read().strip()
@@ -202,6 +206,23 @@ class GameServer:
 
                 world[y][x] = icon
 
+        # tile decay
+        x, y = 0, 0
+        for row in decay:
+            x = 0
+            for tile in row:
+                if "c" in world[y][x]:
+                    decay[y][x] = "0"
+                elif int(tile) >= 30:
+                    self.log("tile " + str(x) + "/" + str(y) + " was lost due to decay")
+                    world[y][x] = "ux"
+                    decay[y][x] = "0"
+                else:
+                    decay[y][x] = str(int(decay[y][x]) + 1)
+                x += 1
+            y += 1
+
+        self.saveMap(decay, file = "decay")
         self.saveMap(world)
         self.drawMap(world)
 
@@ -218,7 +239,10 @@ class GameServer:
 
 def main():
     server = GameServer()
-    server.main()
+    if sys.argv[1] == "pre":
+        server.gameLogic()
+    else:
+        server.gameUpdate()
 
 
 if __name__ == "__main__":

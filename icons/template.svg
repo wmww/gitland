@@ -26,13 +26,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="214.70153"
-     inkscape:cy="954.92149"
+     inkscape:cx="198.65618"
+     inkscape:cy="926.35006"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="968"
+     inkscape:window-height="967"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,7 +58,7 @@
        height="27.025299"
        x="6.9925594"
        y="6.3363094"
-       style="stroke-width:0.26458332;fill:#3d3d3d;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       style="stroke-width:0.26458332;fill:#3d3d3d;fill-opacity:1;stroke:none;stroke-opacity:1"
        inkscape:export-xdpi="29.78393"
        inkscape:export-ydpi="29.78393" />
     <rect
@@ -67,11 +67,11 @@
        height="27.025299"
        x="37.608631"
        y="6.5252962"
-       style="fill:#3dff3d;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       style="fill:#3dff3d;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        inkscape:export-xdpi="29.78393"
        inkscape:export-ydpi="29.78393" />
     <rect
-       style="fill:#3dff3d;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       style="fill:#3dff3d;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        y="6.5252962"
        x="71.248512"
        height="27.025299"
@@ -96,7 +96,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Hack;-inkscape-font-specification:Hack" /></flowRegion><flowPara
          id="flowPara4553"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:Hack;-inkscape-font-specification:'Hack Bold';fill:#000000">@</flowPara></flowRoot>    <rect
-       style="fill:#ff3d3d;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       style="fill:#ff3d3d;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        y="39.03125"
        x="37.419643"
        height="27.025299"
@@ -110,7 +110,7 @@
        height="27.025299"
        x="71.059525"
        y="39.03125"
-       style="fill:#ff3d3d;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       style="fill:#ff3d3d;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        inkscape:export-xdpi="29.78393"
        inkscape:export-ydpi="29.78393" />
     <flowRoot
@@ -135,11 +135,11 @@
        height="27.025299"
        x="37.608631"
        y="71.537201"
-       style="fill:#3d3dff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       style="fill:#3d3dff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        inkscape:export-xdpi="29.78393"
        inkscape:export-ydpi="29.78393" />
     <rect
-       style="fill:#3d3dff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       style="fill:#3d3dff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
        y="71.537201"
        x="71.248512"
        height="27.025299"

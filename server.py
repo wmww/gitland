@@ -205,7 +205,7 @@ class GameServer:
 
 def main():
     server = GameServer()
-    if sys.argv[0] == "pre":
+    if sys.argv[1] == "pre":
         server.gameLogic()
     else:
         server.gameUpdate()

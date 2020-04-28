@@ -18,7 +18,7 @@ class GameServer:
             self.updateGameState()
             os.system("git add -A")
             os.system("git commit -m \"next turn\"")
-            os.system("git push origin master")
+            os.system("git push wnww test")
             time.sleep(60)
 
     def addPlayers(self):

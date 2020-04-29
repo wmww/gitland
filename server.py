@@ -4,7 +4,7 @@
 # No, seriously. The only thing I cared about while writing
 # this was getting it done quickly.
 
-import os, requests, time, re, sys
+import os, requests, time, re, sys, shutil
 from collections import Counter
 
 class GameServer:
@@ -69,10 +69,11 @@ class GameServer:
         open("players/" + player + "/team", "w").write(team)
         open("players/" + player + "/x", "w").write(str(x))
         open("players/" + player + "/y", "w").write(str(y))
+        open("players/" + player + "/timestamp", "w").write(str(time.time()))
 
     def clearPlayerData(self, player: str):
         if player.strip() != "" and os.path.isdir("./players/" + player):
-            os.system("rm -r ./players/" + player) # I'm sure there's an os.something for this but whooo carees
+            shutil.rmtree("./players/" + player)
             self.log(player + " left the game")
         else:
             self.log(player + " didn't leave - no player info found")
@@ -182,6 +183,10 @@ class GameServer:
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
+                if not os.path.isfile("players/" + player + "/timestamp"):
+                    open("players/" + player + "/timestamp", "w").write(str(time.time()))
+                lastActive = float(open("players/" + player + "/timestamp").read().strip())
+                kick = False
 
                 # player input
                 action = self.getPlayerAction(player)
@@ -197,12 +202,24 @@ class GameServer:
                 elif action == "idle":
                     self.log(player + " didn't do anything")
                 else:
-                    self.log(player + " isn't playing")
+                    if time.time() - lastActive > 86400: # 24h
+                        self.log(player + " was kicked - no valid command for 24 hours")
+                        kick = True
+                    else:
+                        self.log(player + " isn't playing")
 
                 # reload after player moves
                 icon = open("players/" + player + "/team").read().strip()
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
+
+                # kick inactive players
+                if time.time() - lastActive > 259200: # 72h
+                    self.log(player + " was kicked - no activity for 72 hours")
+                    kick = True
+                if kick:
+                    self.clearPlayerData(player)
+                    icon = icon.replace("c", "u")
 
                 world[y][x] = icon
 
@@ -212,13 +229,13 @@ class GameServer:
             x = 0
             for tile in row:
                 if "c" in world[y][x]:
-                    decay[y][x] = "0"
-                elif int(tile) >= 30:
+                    decay[y][x] = "90"
+                elif int(tile) <= 0:
                     self.log("tile " + str(x) + "/" + str(y) + " was lost due to decay")
                     world[y][x] = "ux"
-                    decay[y][x] = "0"
+                    decay[y][x] = "90"
                 else:
-                    decay[y][x] = str(int(decay[y][x]) + 1)
+                    decay[y][x] = str(int(decay[y][x]) - 1)
                 x += 1
             y += 1
 

@@ -203,13 +203,14 @@ class GameServer:
                     open("players/" + player + "/timestamp", "w").write(str(time.time()))
                 lastActive = float(open("players/" + player + "/timestamp").read().strip())
 
-                if time.time() - lastActive > 86400: # 24h
-                    self.log(player + " was kicked - no activity for 24 hours")
-
                 # reload after player moves
                 icon = open("players/" + player + "/team").read().strip()
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
+
+                if time.time() - lastActive > 86400: # 24h
+                    self.log(player + " was kicked - no activity for 24 hours")
+                    # TODO: Actually kick the player
 
                 world[y][x] = icon
 

@@ -67,6 +67,7 @@ class GameServer:
         open("players/" + player + "/team", "w").write(team)
         open("players/" + player + "/x", "w").write(str(x))
         open("players/" + player + "/y", "w").write(str(y))
+        open("players/" + player + "/timestamp", "w").write(str(time.time()))
 
     def clearPlayerData(self, player: str):
         if player.strip() != "" and os.path.isdir("./players/" + player):
@@ -180,6 +181,8 @@ class GameServer:
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
+                if not os.path.isfile("players/" + player + "/timestamp"):
+                    open("players/" + player + "/timestamp", "w").write(str(time.time()))
                 lastActive = float(open("players/" + player + "/timestamp").read().strip())
 
                 # player input

@@ -210,13 +210,13 @@ class GameServer:
             x = 0
             for tile in row:
                 if "c" in world[y][x]:
-                    decay[y][x] = "0"
-                elif int(tile) >= 30:
+                    decay[y][x] = "90"
+                elif int(tile) <= 0:
                     self.log("tile " + str(x) + "/" + str(y) + " was lost due to decay")
                     world[y][x] = "ux"
-                    decay[y][x] = "0"
+                    decay[y][x] = "90"
                 else:
-                    decay[y][x] = str(int(decay[y][x]) + 1)
+                    decay[y][x] = str(int(decay[y][x]) - 1)
                 x += 1
             y += 1
 

@@ -210,7 +210,7 @@ class GameServer:
 
                 if time.time() - lastActive > 86400: # 24h
                     self.log(player + " was kicked - no activity for 24 hours")
-                    # TODO: Actually kick the player
+                    self.clearPlayerData(player):
 
                 world[y][x] = icon
 

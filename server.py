@@ -217,6 +217,7 @@ class GameServer:
                     kick = True
                 if kick:
                     self.clearPlayerData(player)
+                    icon = icon.replace("c", "u")
 
                 world[y][x] = icon
 

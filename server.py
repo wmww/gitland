@@ -202,6 +202,7 @@ class GameServer:
                 else:
                     if time.time() - lastActive > 86400: # 24h
                         self.log(player + " was kicked - no valid command for 24 hours")
+                        kick = true
                     else:
                         self.log(player + " isn't playing")
 
@@ -213,6 +214,7 @@ class GameServer:
                 # kick inactive players
                 if time.time() - lastActive > 259200: # 72h
                     self.log(player + " was kicked - no activity for 72 hours")
+                    kick = true
                 if kick:
                     self.clearPlayerData(player)
 

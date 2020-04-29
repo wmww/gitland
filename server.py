@@ -4,7 +4,7 @@
 # No, seriously. The only thing I cared about while writing
 # this was getting it done quickly.
 
-import os, requests, time, re, sys
+import os, requests, time, re, sys, shutil
 
 class GameServer:
     def log(self, text, mode="a"):
@@ -70,7 +70,7 @@ class GameServer:
 
     def clearPlayerData(self, player: str):
         if player.strip() != "" and os.path.isdir("./players/" + player):
-            os.system("rm -r ./players/" + player) # I'm sure there's an os.something for this but whooo carees
+            shutil.rmtree("./players/" + player)
             self.log(player + " left the game")
         else:
             self.log(player + " didn't leave - no player info found")

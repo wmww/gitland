@@ -48,6 +48,8 @@ class GameServer:
             elif title == 'join':
                 # select team with fewest members
                 team = self.getTeamCounts().most_common()[-1][0]
+            elif title in {'cr', 'cg', 'cb'}:
+                team = title
             else:
                 continue  # unrelated issue
 

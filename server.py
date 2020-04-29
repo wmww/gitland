@@ -184,6 +184,7 @@ class GameServer:
                 if not os.path.isfile("players/" + player + "/timestamp"):
                     open("players/" + player + "/timestamp", "w").write(str(time.time()))
                 lastActive = float(open("players/" + player + "/timestamp").read().strip())
+                kick = False
 
                 # player input
                 action = self.getPlayerAction(player)
@@ -201,6 +202,7 @@ class GameServer:
                 else:
                     if time.time() - lastActive > 86400: # 24h
                         self.log(player + " was kicked - no valid command for 24 hours")
+                        kick = True
                     else:
                         self.log(player + " isn't playing")
 
@@ -208,6 +210,14 @@ class GameServer:
                 icon = open("players/" + player + "/team").read().strip()
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
+
+                # kick inactive players
+                if time.time() - lastActive > 259200: # 72h
+                    self.log(player + " was kicked - no activity for 72 hours")
+                    kick = True
+                if kick:
+                    self.clearPlayerData(player)
+                    icon = icon.replace("c", "u")
 
                 world[y][x] = icon
 

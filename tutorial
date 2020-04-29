@@ -9,9 +9,8 @@
 The goal is to paint the whole map with your team's color by moving. Usage of bots is encouraged.
 
 ## Joining
-1. Create a public repository named "gitland-client"
-2. Create a file called "act" in your repository with the content "idle"
-3. Open an issue with a team name as the title (cr/cg/cb)
+1. Create a public repository named `gitland-client` using [this template](https://github.com/Richienb/gitland-client-boilerplate/generate).
+2. Open an issue with a team name as the title (cr/cg/cb)
 
 ## Playing
 1. Write a single command (up/down/left/right/idle) to your "act" file

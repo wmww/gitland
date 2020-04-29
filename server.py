@@ -181,9 +181,6 @@ class GameServer:
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
-                if not os.path.isfile("players/" + player + "/timestamp"):
-                    open("players/" + player + "/timestamp", "w").write(str(time.time()))
-                lastActive = float(open("players/" + player + "/timestamp").read().strip())
 
                 # player input
                 action = self.getPlayerAction(player)
@@ -199,10 +196,15 @@ class GameServer:
                 elif action == "idle":
                     self.log(player + " didn't do anything")
                 else:
-                    if time.time() - lastActive > 86400: # 24h
-                        self.log(player + " was kicked - no valid command for 24 hours")
-                    else:
-                        self.log(player + " isn't playing")
+                    self.log(player + " isn't playing")
+
+                # kick inactive players
+                if not os.path.isfile("players/" + player + "/timestamp"):
+                    open("players/" + player + "/timestamp", "w").write(str(time.time()))
+                lastActive = float(open("players/" + player + "/timestamp").read().strip())
+
+                if time.time() - lastActive > 86400: # 24h
+                    self.log(player + " was kicked - no activity for 24 hours")
 
                 # reload after player moves
                 icon = open("players/" + player + "/team").read().strip()

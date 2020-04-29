@@ -180,6 +180,7 @@ class GameServer:
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
                 y = int(open("players/" + player + "/y").read().strip())
+                lastActive = float(open("players/" + player + "/timestamp").read().strip())
 
                 # player input
                 action = self.getPlayerAction(player)
@@ -195,7 +196,10 @@ class GameServer:
                 elif action == "idle":
                     self.log(player + " didn't do anything")
                 else:
-                    self.log(player + " isn't playing")
+                    if time.time() - lastActive > 86400: # 24h
+                        self.log(player + " was kicked - no valid command for 24 hours")
+                    else:
+                        self.log(player + " isn't playing")
 
                 # reload after player moves
                 icon = open("players/" + player + "/team").read().strip()

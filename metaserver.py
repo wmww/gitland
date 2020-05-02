@@ -10,4 +10,5 @@ while True:
     os.system("./server.py post")
     
     elapsed_time = time.time() - start_time
-    time.sleep(60 - elapsed_time)
+    if elapsed_time <= 60:
+        time.sleep(60 - elapsed_time)

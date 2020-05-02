@@ -5,6 +5,7 @@
 # this was getting it done quickly.
 
 import os, requests, time, re, sys, shutil
+from concurrent import futures
 from collections import Counter
 
 class GameServer:
@@ -167,6 +168,18 @@ class GameServer:
             print('failed to find action in HTML for player ' + player)
             return ''
 
+    def getAllPlayerActions(self) -> dict:
+        executor = futures.ThreadPoolExecutor()
+        requests = {}
+        for player in os.listdir("players"):
+            if os.path.isdir("players/" + player):
+                 request = executor.submit(lambda: self.getPlayerAction(player))
+                 requests[player] = request
+        actions = {}
+        for player, request in requests.items():
+            actions[player] = request.result()
+        return actions
+
     def updateGameState(self):
         world = self.loadMap()
         decay = self.loadMap(file = "decay")
@@ -180,7 +193,8 @@ class GameServer:
                 x += 1
             y += 1
 
-        # add players
+        actions = self.getAllPlayerActions()
+
         for player in os.listdir("players"):
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
@@ -191,7 +205,7 @@ class GameServer:
                 kick = False
 
                 # player input
-                action = self.getPlayerAction(player)
+                action = actions[player]
 
                 if action == "left":
                     self.movePlayer(player, x - 1, y)

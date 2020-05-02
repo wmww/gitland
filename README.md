@@ -35,7 +35,7 @@ The goal is to paint the whole map with your team's color by moving. Usage of bo
 
 ## Joining
 1. Create a public repository named `gitland-client` using [this template](https://github.com/Richienb/gitland-client-boilerplate/generate).
-2. Open an issue with a team name as the title (cr/cg/cb)
+2. Open an issue with the title "join". You will be assigned to the team with the fewest members.
 
 ## Playing
 1. Write a single command (up/down/left/right/idle) to your "act" file

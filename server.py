@@ -193,8 +193,6 @@ class GameServer:
                 x += 1
             y += 1
 
-        actions = self.getAllPlayerActions()
-
         for player in os.listdir("players"):
             if os.path.isdir("players/" + player):
                 x = int(open("players/" + player + "/x").read().strip())
@@ -205,7 +203,7 @@ class GameServer:
                 kick = False
 
                 # player input
-                action = actions[player]
+                action = self.getPlayerAction(player)
 
                 if action == "left":
                     self.movePlayer(player, x - 1, y)

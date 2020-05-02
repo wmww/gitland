@@ -6,4 +6,4 @@ while True:
     os.system("./server.py pre")
     os.system("git pull origin master")
     os.system("./server.py post")
-    time.sleep(22)
+    time.sleep(50)
